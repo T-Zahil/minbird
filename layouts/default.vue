@@ -29,19 +29,35 @@ export default {
 }
 
 body {
+  transition: background-color 0.3s ease;
   font-size: 12px;
   font-family: 'CascadiaCode', Arial, sans-serif;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
 }
 
-.dark-mode body {
-  /* Blackship */
-  background-color: #1b2133;
-  @apply text-sepia;
+.dark-mode {
+  body {
+    @apply bg-dark text-sepia;
+  }
 
   .divider {
     @apply bg-orange-200;
+  }
+
+  button {
+    @apply bg-sepia text-dark;
+
+    &:hover {
+      @apply bg-white;
+    }
+  }
+
+  .feather {
+    @apply border-brown-200;
+    &.selected {
+      @apply bg-sepia text-dark;
+    }
   }
 }
 
@@ -51,11 +67,47 @@ body {
   }
 
   button {
-    @apply bg-brown-200;
+    @apply bg-brown-200 text-sepia;
+
+    &:hover {
+      @apply bg-brown-100;
+    }
   }
 
   .divider {
     @apply bg-brown-100;
+  }
+
+  .feather {
+    @apply border-brown-200;
+    &.selected {
+      @apply bg-brown-200 text-sepia;
+    }
+  }
+}
+
+.light-mode {
+  body {
+    @apply text-dark bg-gray-100;
+  }
+
+  button {
+    @apply bg-dark text-sepia;
+
+    &:hover {
+      @apply bg-gray-800;
+    }
+  }
+
+  .divider {
+    @apply bg-gray-500;
+  }
+
+  .feather {
+    @apply border-dark;
+    &.selected {
+      @apply bg-dark text-sepia;
+    }
   }
 }
 

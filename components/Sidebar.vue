@@ -80,21 +80,13 @@
               <span class="inline-flex rounded-md">
                 <button
                   type="button"
-                  class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white hover:bg-brown-100 focus:outline-none focus:shadow-outline-black transition ease-in-out duration-150"
+                  class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded focus:outline-none focus:shadow-outline-black transition ease-in-out duration-150"
                 >
                   My list
                 </button>
               </span>
-              <div class="mt-4 mb-2 divider" />
-              <ul class="flex">
-                <li v-for="color of colors" :key="color">
-                  <component
-                    :is="`icon-${color}`"
-                    :class="getClasses(color)"
-                    @click="$colorMode.preference = color"
-                  />
-                </li>
-              </ul>
+              <div class="my-2 mb-2 divider" />
+              <ColorSwitcher />
               <div class="my-2 divider" />
             </div>
           </div>
@@ -148,52 +140,7 @@
 </template>
 
 <script>
-import IconLight from '@/assets/icons/light.svg?inline'
-import IconDark from '@/assets/icons/dark.svg?inline'
-import IconSepia from '@/assets/icons/sepia.svg?inline'
-
 export default {
   name: 'Sidebar',
-  components: {
-    IconLight,
-    IconDark,
-    IconSepia,
-  },
-  data() {
-    return {
-      colors: ['light', 'dark', 'sepia'],
-    }
-  },
-  methods: {
-    getClasses(color) {
-      // Does not set classes on ssr preference is system (because we know them on client-side)
-      if (this.$colorMode.unknown) {
-        return {}
-      }
-      return {
-        preferred: color === this.$colorMode.preference,
-        selected: color === this.$colorMode.value,
-      }
-    },
-  },
 }
 </script>
-
-<style lang="scss">
-.feather {
-  @apply relative top-0 cursor-pointer m-0 rounded p-2 w-10 h-10;
-  background-color: var(--bg-secondary);
-  border: 2px solid var(--border-color);
-  transition: all 0.1s ease;
-  &:hover {
-    top: -3px;
-  }
-  .preferred {
-    border-color: var(--color-primary);
-    top: -3px;
-  }
-  .selected {
-    color: var(--color-primary);
-  }
-}
-</style>

@@ -7,6 +7,7 @@ module.exports = {
           200: '#433422',
         },
         sepia: '#fbe8d3',
+        dark: '#1b2133',
       },
     },
   },
