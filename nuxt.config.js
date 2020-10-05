@@ -5,6 +5,8 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
+  components: true,
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'minbird',
@@ -22,8 +24,9 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  colorMode: {
+    preference: 'sepia',
+  },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -33,6 +36,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/svg',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -42,7 +47,14 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    headers: {
+      'Content-Type': 'application/json',
+      'content-type': 'application/json',
+      'Cache-Control': 'no-cache',
+      'X-Accel-Buffering': 'no',
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
