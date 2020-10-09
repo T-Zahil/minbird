@@ -1,14 +1,10 @@
 <template>
-  <div class="flex h-screen overflow-hidden">
-    <!-- <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-      <option value="sepia">Sepia</option>
-    </select> -->
+  <div class="flex flex-col h-screen overflow-hidden md:flex-row">
     <Sidebar />
-    <div class="flex flex-col items-start flex-1 h-screen">
-      <nuxt class="h-full" keep-alive />
+    <div
+      class="flex flex-col items-center flex-1 min-h-screen overflow-y-scroll md:items-start"
+    >
+      <nuxt class="h-full px-8 md:px-0" keep-alive />
     </div>
   </div>
 </template>
@@ -30,7 +26,7 @@ export default {
 
 body {
   transition: background-color 0.3s ease;
-  font-size: 12px;
+  font-size: 13px;
   font-family: 'CascadiaCode', Arial, sans-serif;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
@@ -112,8 +108,7 @@ body {
 }
 
 .divider {
+  @apply w-12 my-2;
   height: 1px;
-
-  @apply w-12;
 }
 </style>

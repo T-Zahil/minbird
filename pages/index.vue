@@ -1,7 +1,16 @@
 <template>
   <div>
-    <div v-for="(tweet, index) in tweets" :key="index">
-      {{ tweet.content }}
+    <div
+      v-if="tweets && tweets.length"
+      class="w-full pt-5 overflow-y-scroll"
+      :class="$style.tweetContainer"
+    >
+      <div v-for="(tweet, index) in tweets" :key="index" class="my-6">
+        <Tweet :tweet="tweet" />
+      </div>
+    </div>
+    <div v-else class="mt-5">
+      <span>Loading tweets...</span>
     </div>
   </div>
 </template>
@@ -26,3 +35,13 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" module>
+.tweetContainer {
+  &:-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+</style>
