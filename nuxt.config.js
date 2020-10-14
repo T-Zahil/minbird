@@ -3,7 +3,7 @@ export default {
   ssr: false,
 
   // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
+  // target: 'static',
 
   components: true,
 
