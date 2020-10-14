@@ -25,7 +25,7 @@ export default {
   plugins: [],
 
   colorMode: {
-    preference: 'system',
+    preference: 'sepia',
   },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
