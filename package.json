@@ -24,7 +24,9 @@
     "@nuxtjs/axios": "^5.12.2",
     "@tailwindcss/ui": "^0.6.2",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.5"
+    "nuxt": "^2.14.5",
+    "nuxt-vuex-localstorage": "^1.2.7",
+    "vue-click-outside": "^1.1.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.1.1",

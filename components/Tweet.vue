@@ -9,7 +9,7 @@
         {{ tweet.content }}
       </p>
     </div>
-    <div class="my-10 divider" />
+    <div class="divider" />
   </div>
 </template>
 

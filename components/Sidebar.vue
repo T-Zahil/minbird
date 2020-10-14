@@ -27,6 +27,7 @@
                 <button
                   type="button"
                   class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded focus:outline-none focus:shadow-outline-black transition ease-in-out duration-150"
+                  @click.stop="displayList"
                 >
                   My list
                 </button>
@@ -47,6 +48,11 @@
 <script>
 export default {
   name: 'Sidebar',
+  methods: {
+    displayList() {
+      this.$store.commit('toggleList', true)
+    },
+  },
 }
 </script>
 
@@ -54,6 +60,7 @@ export default {
 .sidebar {
   min-height: 74px;
   @screen md {
+    width: 415px;
     min-height: 300px;
   }
 }

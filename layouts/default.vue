@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden md:flex-row">
     <Sidebar />
+    <FollowingList />
     <div
       class="flex flex-col items-center flex-1 min-h-screen overflow-y-scroll md:items-start"
     >
@@ -11,6 +12,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isListActive: false,
+    }
+  },
   mounted() {
     this.$colorMode.preference = 'sepia'
   },
@@ -23,6 +29,12 @@ export default {
   src: url('../assets/fonts/CascadiaMono.woff2') format('woff2'),
     url('../assets/fonts/CascadiaMono.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'CascadiaCode';
+  src: url('../assets/fonts/CascadiaMono-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/CascadiaMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
 
 body {
   transition: background-color 0.3s ease;
@@ -33,7 +45,8 @@ body {
 }
 
 .dark-mode {
-  body {
+  body,
+  .followingListBg {
     @apply bg-dark text-sepia;
   }
 
@@ -48,6 +61,9 @@ body {
       @apply bg-white;
     }
   }
+  input {
+    @apply border-sepia;
+  }
 
   .feather {
     @apply border-brown-200;
@@ -58,7 +74,8 @@ body {
 }
 
 .sepia-mode {
-  body {
+  body,
+  .followingListBg {
     @apply text-brown-200 bg-sepia;
   }
 
@@ -80,10 +97,15 @@ body {
       @apply bg-brown-200 text-sepia;
     }
   }
+
+  input {
+    @apply border-brown-200;
+  }
 }
 
 .light-mode {
-  body {
+  body,
+  .followingListBg {
     @apply text-dark bg-gray-100;
   }
 
@@ -104,6 +126,9 @@ body {
     &.selected {
       @apply bg-dark text-sepia;
     }
+  }
+  input {
+    @apply border-dark;
   }
 }
 

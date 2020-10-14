@@ -1,5 +1,8 @@
 module.exports = {
   theme: {
+    fontFamily: {
+      mono: ['CascadiaCode'],
+    },
     extend: {
       colors: {
         brown: {
