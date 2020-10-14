@@ -31,7 +31,7 @@ export const actions = {
     if (rootState.localStorage.followingList.length) {
       commit('setLoadingTweets', true)
       const response = await axios.get(
-        `https://minbird.thomas-sanlis.com/tweets?u=${rootState.localStorage.followingList}`
+        `https://api-minbird.thomas-sanlis.com/tweets?u=${rootState.localStorage.followingList}`
       )
       commit(
         'setTweets',
