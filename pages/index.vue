@@ -8,6 +8,10 @@
       <div v-for="(tweet, index) in tweets" :key="index" class="my-12">
         <Tweet :tweet="tweet" />
       </div>
+      <infinite-loading
+        :class="$style.infiniteLoading"
+        @infinite="infiniteHandler"
+      />
     </div>
     <div v-else-if="loadingTweets" class="mt-5">
       <span>Loading tweets...</span>
@@ -34,8 +38,18 @@ export default {
     tweets: (state) => state.tweets,
     loadingTweets: (state) => state.loadingTweets,
   }),
+
   async created() {
     await this.$store.dispatch('fetchTweets')
+  },
+
+  methods: {
+    infiniteHandler($state) {
+      this.$store.dispatch('upgradeTweetsQuantity')
+      this.$store.dispatch('fetchTweets').then(() => {
+        $state.loaded()
+      })
+    },
   },
 }
 </script>
@@ -47,5 +61,8 @@ export default {
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.infiniteLoading {
+  width: 510px;
 }
 </style>

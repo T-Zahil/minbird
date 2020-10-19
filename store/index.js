@@ -6,6 +6,7 @@ export const state = () => ({
   listDisplayed: false,
   loadingTweets: false,
   tweets: null,
+  tweetsQuantity: 100,
 })
 
 export const mutations = {
@@ -24,10 +25,13 @@ export const mutations = {
   setLoadingTweets(state, commit) {
     state.loadingTweets = commit
   },
+  setTweetsQuantity(state, commit) {
+    state.tweetsQuantity = commit
+  },
 }
 
 export const actions = {
-  async fetchTweets({ commit, rootState }) {
+  async fetchTweets({ commit, rootState }, tweetsQuantity) {
     if (rootState.localStorage.followingList.length) {
       commit('setLoadingTweets', true)
       const response = await axios.get(
@@ -49,5 +53,9 @@ export const actions = {
       commit('setEmptyList', true)
       commit('setTweets', null)
     }
+  },
+
+  upgradeTweetsQuantity(context) {
+    context.commit('setTweetsQuantity', context.state.tweetsQuantity + 100)
   },
 }
