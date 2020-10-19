@@ -118,17 +118,20 @@ export default {
   directives: {
     ClickOutside,
   },
+
   data() {
     return {
       newFollower: '',
       isPreventingClickOutsideProcess: false,
     }
   },
+
   computed: {
     listDisplayed() {
       return this.$store.state.listDisplayed
     },
   },
+
   methods: {
     closeList() {
       if (!this.isPreventingClickOutsideProcess) {

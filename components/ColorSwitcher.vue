@@ -17,16 +17,19 @@ import IconSepia from '@/assets/icons/sepia.svg?inline'
 
 export default {
   name: 'ColorSwitcher',
+
   components: {
     IconLight,
     IconDark,
     IconSepia,
   },
+
   data() {
     return {
       colors: ['light', 'dark', 'sepia'],
     }
   },
+
   methods: {
     getClasses(color) {
       if (this.$colorMode.unknown) {

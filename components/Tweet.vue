@@ -16,12 +16,14 @@
 <script>
 export default {
   name: 'Tweet',
+
   props: {
     tweet: {
       type: Object,
       default: () => {},
     },
   },
+
   computed: {
     formatedDate() {
       return this.tweet.date.slice(0, 16)

@@ -17,6 +17,7 @@ export default {
       isListActive: false,
     }
   },
+
   mounted() {
     this.$colorMode.preference = 'sepia'
   },

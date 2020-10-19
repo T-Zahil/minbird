@@ -105,11 +105,13 @@
 <script>
 export default {
   name: 'Sidebar',
+
   data() {
     return {
       displaySidebar: true,
     }
   },
+
   methods: {
     displayList() {
       this.$store.commit('toggleList', true)
