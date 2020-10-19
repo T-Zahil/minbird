@@ -13,10 +13,7 @@
       <span>Loading tweets...</span>
     </div>
     <div v-else-if="emptyList" class="mt-5">
-      <span
-        >You don't follow anyone yet. Click on the "My list" button on your
-        left!</span
-      >
+      <span>You don't follow anyone yet. Click on the "My list" button!!</span>
     </div>
     <div v-else class="mt-5">
       <span
