@@ -53,6 +53,13 @@
                     target="_blank"
                     >Contact</a
                   >
+                  <a
+                    class="ml-2 underline"
+                    href="https://github.com/t-zahil"
+                    rel="noopener"
+                    target="_blank"
+                    >Github
+                  </a>
                 </div>
               </div>
             </div>
