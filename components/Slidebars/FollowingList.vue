@@ -143,9 +143,15 @@ export default {
       }, 100)
     },
     async addFollower() {
-      await this.$store.commit('localStorage/addFollower', this.newFollower)
-      this.newFollower = ''
-      await this.$store.dispatch('fetchTweets')
+      if (
+        this.$store.state.localStorage.followingList.includes(this.newFollower)
+      ) {
+        alert('This follower is already in your list!')
+      } else {
+        await this.$store.commit('localStorage/addFollower', this.newFollower)
+        this.newFollower = ''
+        await this.$store.dispatch('fetchTweets')
+      }
     },
     async removeFollower(follower) {
       await this.$store.commit('localStorage/removeFollower', follower)
