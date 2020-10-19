@@ -37,6 +37,15 @@
                 class="fixed right-0 flex mr-4 md:relative md:mr-0"
               />
               <div class="hidden divider md:block" />
+              <div>
+                <a
+                  class="underline"
+                  href="https://twitter.com/t_zahil"
+                  rel="noopener"
+                  target="_blank"
+                  >Contact</a
+                >
+              </div>
             </div>
           </div>
         </div>
