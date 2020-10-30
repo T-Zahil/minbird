@@ -31,11 +31,11 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchTweets({ commit, rootState }, tweetsQuantity) {
+  async fetchTweets({ commit, rootState }) {
     if (rootState.localStorage.followingList.length) {
       commit('setLoadingTweets', true)
       const response = await axios.get(
-        `https://api-minbird.thomas-sanlis.com/tweets?u=${rootState.localStorage.followingList}`
+        `https://api-minbird.thomas-sanlis.com/tweets?u=${rootState.localStorage.followingList}&n=${rootState.tweetsQuantity}`
       )
       commit(
         'setTweets',
