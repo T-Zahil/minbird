@@ -51,6 +51,10 @@ body {
     @apply bg-dark text-sepia;
   }
 
+  .sidebar {
+    @apply bg-dark;
+  }
+
   .divider {
     @apply bg-orange-200;
   }
@@ -78,6 +82,10 @@ body {
   body,
   .followingListBg {
     @apply text-brown-200 bg-sepia;
+  }
+
+  .sidebar {
+    @apply bg-sepia;
   }
 
   button {
@@ -108,6 +116,10 @@ body {
   body,
   .followingListBg {
     @apply text-dark bg-gray-100;
+  }
+
+  .sidebar {
+    @apply bg-gray-100;
   }
 
   button {

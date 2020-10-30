@@ -2,10 +2,10 @@
   <div class="w-full">
     <div
       v-if="tweets && tweets.length"
-      class="w-full h-screen pt-5"
+      class="w-full h-screen pt-5 space-y-12"
       :class="$style.tweetContainer"
     >
-      <div v-for="(tweet, index) in tweets" :key="index" class="my-12">
+      <div v-for="(tweet, index) in tweets" :key="index">
         <Tweet :tweet="tweet" />
       </div>
       <infinite-loading

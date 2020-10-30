@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed bottom-0 flex justify-center w-full overflow-hidden border-t border-black md:w-auto md:justify-start md:border-none md:relative"
+    class="fixed bottom-0 z-10 flex justify-center w-full overflow-hidden border-t border-black md:w-auto md:justify-start md:border-none md:relative sidebar"
     :class="$style.sidebar"
   >
     <transition
