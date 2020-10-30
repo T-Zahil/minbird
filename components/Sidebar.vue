@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center w-full overflow-hidden border-b border-black md:w-auto md:justify-start md:border-none"
+    class="fixed bottom-0 flex justify-center w-full overflow-hidden border-t border-black md:w-auto md:justify-start md:border-none md:relative"
     :class="$style.sidebar"
   >
     <transition
@@ -19,19 +19,21 @@
           <!-- Sidebar component, swap this element with another sidebar if you like -->
           <div class="flex flex-col flex-1 h-0">
             <div
-              class="flex flex-col justify-center flex-1 pt-5 pb-4 md:justify-start"
+              class="flex flex-col flex-wrap justify-center flex-1 pt-2 pb-6 md:pt-5 md:pb-4 md:justify-start"
             >
               <div
-                class="flex flex-row items-center flex-shrink-0 px-4 md:items-start md:flex-col"
+                class="flex flex-row flex-wrap items-center flex-shrink-0 px-4 md:items-start md:flex-col md:flex-no-wrap"
               >
-                <h1 class="text-xl font-extrabold">Minbird</h1>
+                <h1 class="w-full text-xl font-extrabold text-left">Minbird</h1>
                 <div class="hidden divider md:block" />
                 <p class="hidden w-64 font-semibold md:block">
                   A minimalistic twitter feed, without an account. Choose the
                   people you want to follow. Finally a quiet twitter.
                 </p>
                 <div class="hidden divider md:block" />
-                <span class="inline-flex ml-6 rounded-md md:ml-0">
+                <span
+                  class="inline-flex justify-start flex-1 my-2 rounded-md md:my-0"
+                >
                   <button
                     type="button"
                     class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded focus:outline-none focus:shadow-outline-black transition ease-in-out duration-150"
@@ -42,10 +44,12 @@
                 </span>
                 <div class="hidden my-2 mb-2 divider md:block" />
                 <ColorSwitcher
-                  class="fixed right-0 flex mr-4 md:relative md:mr-0"
+                  class="absolute flex justify-start md:relative bottom-1 right-1"
                 />
                 <div class="hidden divider md:block" />
-                <div>
+                <div
+                  class="absolute ml-3 text-left md:relative bottom-1 left-1 md:ml-0"
+                >
                   <a
                     class="underline"
                     href="https://twitter.com/t_zahil"
@@ -70,7 +74,7 @@
 
     <!-- Toggle sidebar -->
     <div
-      class="absolute z-10 cursor-pointer top-6 left-5"
+      class="absolute z-10 invisible cursor-pointer top-6 left-5 md:visible"
       @click="toggleSidebar"
     >
       <svg
