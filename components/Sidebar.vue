@@ -59,7 +59,7 @@
                   >
                   <a
                     class="ml-2 underline"
-                    href="https://github.com/t-zahil"
+                    href="https://github.com/t-zahil/minbird"
                     rel="noopener"
                     target="_blank"
                     >Github
