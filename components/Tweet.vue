@@ -1,7 +1,16 @@
 <template>
   <div class="w-full">
-    <div class="mb-2">
-      <span>@{{ tweet.user }} •</span>
+    <div class="flex mb-2">
+      <a
+        :href="`https://twitter.com/${tweet.user}`"
+        rel="noopener"
+        target="_blank"
+        class="flex"
+      >
+        <span>@</span>
+        <span class="underline">{{ tweet.user }}</span>
+      </a>
+      <span class="mx-1">•</span>
       <span>{{ formatedDate }}</span>
     </div>
     <div :class="$style.tweetContent">
