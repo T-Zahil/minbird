@@ -1,20 +1,30 @@
-# minbird
+<p align="center">
+  <img src="./static/minbird-bg.svg" alt="minbird">
+</p>
 
-## Build Setup
+# Minbird
+
+A minimalistic twitter feed, without an account. Choose the people you want to follow. Finally a quiet twitter.
+
+![screenshot](https://github.com/T-Zahil/minbird/blob/master/static/screenshot.jpg)
+
+## Getting started
+
+### Install dependencies
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+$ yarn
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+### Serve with hot reload at localhost:3000
+
+```bash
+$ yarn dev
+```
+
+### Build for production and launch server
+
+```bash
+$ yarn build
+$ yarn start
+```
