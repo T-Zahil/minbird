@@ -1,8 +1,8 @@
 <template>
   <section
     v-click-outside="clickOutside"
-    :class="$style.followingList"
-    class="absolute inset-y-0 left-0 z-20 flex pr-10"
+    :class="[$style.followingList, { 'z-20': listDisplayed }]"
+    class="absolute inset-y-0 left-0 flex pr-10"
   >
     <transition
       enter-active-class="transition duration-500 ease-in-out transform sm:duration-700"
