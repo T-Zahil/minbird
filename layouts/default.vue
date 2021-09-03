@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden md:flex-row">
     <Sidebar />
-    <FollowingList />
+    <Slidebars-FollowingList />
     <div
       class="flex flex-col items-center flex-1 min-h-screen overflow-y-scroll md:items-start"
     >
@@ -14,13 +14,13 @@
 export default {
   data() {
     return {
-      isListActive: false,
+      isListActive: false
     }
   },
 
   mounted() {
     this.$colorMode.preference = 'sepia'
-  },
+  }
 }
 </script>
 

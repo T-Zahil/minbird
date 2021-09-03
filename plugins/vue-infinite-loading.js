@@ -4,6 +4,6 @@ import InfiniteLoading from 'vue-infinite-loading'
 
 Vue.use(InfiniteLoading, {
   system: {
-    throttleLimit: 500,
-  },
+    throttleLimit: 500
+  }
 })

@@ -1,11 +1,7 @@
 export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
-
-  // Target (https://go.nuxtjs.dev/config-target)
-  // target: 'static',
-
   components: true,
+  telemetry: false,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -50,6 +46,12 @@ export default {
         sizes: '16x16',
       },
     ],
+  },
+
+  env: {
+    TWITTER_API_KEY: process.env.TWITTER_API_KEY,
+    TWITTER_SECRET_KEY: process.env.TWITTER_SECRET_KEY,
+    TWITTER_BEARER: process.env.TWITTER_BEARER,
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

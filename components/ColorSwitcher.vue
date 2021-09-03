@@ -21,12 +21,12 @@ export default {
   components: {
     IconLight,
     IconDark,
-    IconSepia,
+    IconSepia
   },
 
   data() {
     return {
-      colors: ['light', 'dark', 'sepia'],
+      colors: ['light', 'dark', 'sepia']
     }
   },
 
@@ -36,10 +36,10 @@ export default {
         return {}
       }
       return {
-        selected: color === this.$colorMode.value,
+        selected: color === this.$colorMode.value
       }
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -29,15 +29,15 @@ export default {
   props: {
     tweet: {
       type: Object,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
 
   computed: {
     formatedDate() {
       return this.tweet.date.slice(0, 16)
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -36,7 +36,7 @@ export default {
     cantFindTweets: (state) => state.cantFindTweets,
     emptyList: (state) => state.emptyList,
     tweets: (state) => state.tweets,
-    loadingTweets: (state) => state.loadingTweets,
+    loadingTweets: (state) => state.loadingTweets
   }),
 
   async created() {
@@ -49,8 +49,8 @@ export default {
       this.$store.dispatch('fetchTweets').then(() => {
         $state.loaded()
       })
-    },
-  },
+    }
+  }
 }
 </script>
 

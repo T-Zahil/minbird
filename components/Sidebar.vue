@@ -89,8 +89,8 @@
         stroke-linecap="round"
         stroke-linejoin="round"
       >
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
       </svg>
 
       <svg
@@ -105,8 +105,8 @@
         stroke-linecap="round"
         stroke-linejoin="round"
       >
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
       </svg>
     </div>
     <!-- End Toggle sidebar -->
@@ -119,7 +119,7 @@ export default {
 
   data() {
     return {
-      displaySidebar: true,
+      displaySidebar: true
     }
   },
 
@@ -129,8 +129,8 @@ export default {
     },
     toggleSidebar() {
       this.displaySidebar = !this.displaySidebar
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -1,5 +1,5 @@
 export const state = () => ({
-  followingList: [],
+  followingList: []
 })
 
 export const mutations = {
@@ -10,5 +10,5 @@ export const mutations = {
     state.followingList = state.followingList.filter(
       (follower) => follower !== commit
     )
-  },
+  }
 }

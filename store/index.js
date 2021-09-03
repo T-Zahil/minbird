@@ -6,7 +6,7 @@ export const state = () => ({
   listDisplayed: false,
   loadingTweets: false,
   tweets: null,
-  tweetsQuantity: 100,
+  tweetsQuantity: 100
 })
 
 export const mutations = {
@@ -27,7 +27,7 @@ export const mutations = {
   },
   setTweetsQuantity(state, commit) {
     state.tweetsQuantity = commit
-  },
+  }
 }
 
 export const actions = {
@@ -57,5 +57,5 @@ export const actions = {
 
   upgradeTweetsQuantity(context) {
     context.commit('setTweetsQuantity', context.state.tweetsQuantity + 100)
-  },
+  }
 }
